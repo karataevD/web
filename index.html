@@ -1,12 +1,15 @@
-<!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-</head>
-<body>
-    <div id="app-5">
-        <p>{{ message }}</p>
-        <button v-on:click="reverseMessage">Перевернуть сообщение</button>
-      </div>
-</body>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        
+        <div id="app">
+            <p>{{ message }}</p>
+            <button v-on:click="reverseMessage">Reverse Message</button>
+        </div>
+        
+        <script src="index.js"></script>
+    </body>
 </html>
