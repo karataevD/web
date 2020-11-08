@@ -1,6 +1,7 @@
 <template>
-<div v-show="step === 1" class="containerstep1">
-  <form>
+<div class="container">
+  <img class="draftLogo" src="./assets/draftLogo.svg">
+  <form v-show="step === 1">
     <div class="form-group">
       <label for="login">Электронная почта</label>
       <input type="email" class="form-control" id="login" placeholder="example@example.org">
@@ -15,14 +16,38 @@
       <label class="form-check-label" for="checkBox1">Запомнить меня</label>
     </div>
     <div class="btnSignIn">
-    <button type="button" class="btn btn-primary">Вход</button>
+      <button type="send" class="btn btn-warning">Вход</button>
     </div>
     <div class="btnRegister">
-    <button @click="nextStep" type="button" class="btn btn-primary">Регистрация</button>
+      <button @click="nextStep" type="button" class="btn btn-warning">Регистрация</button>
+    </div>
+  </form>
+  <form v-show="step === 2">
+    <div class="form-group">
+      <label for="exampleInputPassword1">Имя</label>
+      <input type="text" class="form-control" id="name">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Фамилия</label>
+      <input type="text" class="form-control" id="surname">
+    </div>
+    <div class="form-group">
+      <label for="login">Введите вашу электронную почту</label>
+      <input type="email" class="form-control" id="login" placeholder="example@example.org">
+      <small id="emailHelp" class="form-text text-muted">Мы никогда никому не передадим вашу электронную почту.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Придумайте пароль</label>
+      <input type="password" class="form-control" id="password">
+    </div>
+    <div class="btnSignIn">
+      <button @click="backStep" type="button" class="btn btn-light">Назад</button>
+      <div class="btnInRegistration">
+      <button type="send" class="btn btn-warning">Зарегистрироваться</button>
+      </div>
     </div>
   </form>
 </div>
-
 </template>
 
 <script>
@@ -35,23 +60,24 @@
     methods: {
       nextStep() {
         this.step++
+      },
+      backStep() {
+        this.step--
       }
     }
   }
 </script>
 
 <style>
-.containerstep1{
+.container{
   position: absolute;
-  top: 30%;
+  top: 10%;
   width: 20%;
   left: 40%;
-
 }
-
-.btn {
-  background: blueviolet;
-  border: blueviolet;
+.btnInRegistration {
+  margin-left: 2%;
+  display: inline;
 }
 .btnSignIn {
   display:inline;
