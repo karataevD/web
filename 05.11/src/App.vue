@@ -1,11 +1,9 @@
 <template>
 <div class="container">
-  <img class="draftLogo" src="./assets/draftLogo.svg">
   <form v-show="step === 1">
     <div class="form-group">
-      <label for="login">Электронная почта</label>
-      <input type="email" class="form-control" id="login" placeholder="example@example.org">
-      <small id="emailHelp" class="form-text text-muted">Мы никогда никому не передадим вашу электронную почту.</small>
+      <label for="login">Введите вашу электронную почту</label>
+      <input type="email" class="form-control" id="login">
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Пароль</label>
@@ -16,10 +14,10 @@
       <label class="form-check-label" for="checkBox1">Запомнить меня</label>
     </div>
     <div class="btnSignIn">
-      <button type="send" class="btn btn-warning">Вход</button>
+      <button type="send" class="btn btn-primary">Вход</button>
     </div>
     <div class="btnRegister">
-      <button @click="nextStep" type="button" class="btn btn-warning">Регистрация</button>
+      <button @click="nextStep" type="button" class="btn btn-primary">Регистрация</button>
     </div>
   </form>
   <form v-show="step === 2">
@@ -33,17 +31,16 @@
     </div>
     <div class="form-group">
       <label for="login">Введите вашу электронную почту</label>
-      <input type="email" class="form-control" id="login" placeholder="example@example.org">
-      <small id="emailHelp" class="form-text text-muted">Мы никогда никому не передадим вашу электронную почту.</small>
+      <input type="email" class="form-control" id="login">
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Придумайте пароль</label>
       <input type="password" class="form-control" id="password">
     </div>
     <div class="btnSignIn">
-      <button @click="backStep" type="button" class="btn btn-light">Назад</button>
+      <button @click="backStep" type="button" class="btn btn-secondary">Назад</button>
       <div class="btnInRegistration">
-      <button type="send" class="btn btn-warning">Зарегистрироваться</button>
+      <button type="send" class="btn btn-primary">Зарегистрироваться</button>
       </div>
     </div>
   </form>
@@ -71,7 +68,7 @@
 <style>
 .container{
   position: absolute;
-  top: 10%;
+  top: 20%;
   width: 20%;
   left: 40%;
 }
