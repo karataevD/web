@@ -1,9 +1,9 @@
 import VueRouter from 'vue-router'
 
 import Home from '../pages/Home'
-import uk from '../pages/uk'
-import ru from '../pages/ru'
-import en from '../pages/en'
+import Products from '../pages/Products'
+import Aboutus from '../pages/Aboutus'
+import Contacts from '../pages/Contacts'
 
 export default new VueRouter({
     mode: 'history',
@@ -14,19 +14,19 @@ export default new VueRouter({
         component: Home
     },
     {
-        path: '/uk',
-        name: 'uk',
-        component: uk
+        path: '/products',
+        name: 'products',
+        component: Products
     },
     {
-        path: '/ru',
-        name: 'ru',
-        component: ru
+        path: '/aboutus',
+        name: 'aboutus',
+        component: Aboutus
     },
     {
-        path: '/en',
-        name: 'en',
-        component: en
+        path: '/contacts',
+        name: 'contacts',
+        component: Contacts
     }
     ]
 })
