@@ -6,7 +6,7 @@
 </head>
 <body>
     <div id="app">
-        <span @mouseover="changeText">Текст</span>
+        <span @click="changeText">Текст</span>
         <p>{{ title }}</p>
         <p v-bind:class="styleCSS">Цвет: {{ styleCSS }}</p>
         <input type="text" v-on:input="styleCSS = $event.target.value">
