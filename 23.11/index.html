@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+
+<div id="app">
+    <button v-on:click="show = !show">Показать/Скрыть</button>
+    <p v-if="show">Текст, который может стать невидимым</p>
+    <p v-else>{{ message | capatilize }}</p>
+
+    <ul>
+        <li v-for="(car,i) in cars">{{ ++i }} - {{ car.model }}, скорость: {{ car.speed }}</li>
+    </ul>
+
+    <script src="js/main.js"></script>
+</div>
+</body>
+</html>
